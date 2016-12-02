@@ -1,0 +1,33 @@
+SHDL
+====
+
+Scheme Hardware Description Language (SHDL).
+
+
+Example
+-------
+
+> (define a (make-wire))
+> (define b (make-wire))
+> (define c-in (make-wire))
+> (define s (make-wire))
+> (define c-out (make-wire))
+> (full-adder a b c-in s c-out)
+ok
+> (set-signal! a 1)
+done
+> (set-signal! b 1)
+done
+> (propagate)
+done
+> (get-signal s)
+0
+> (get-signal c-out)
+1
+
+
+References
+----------
+
+- Structure and Interpretation of Computer Programs (SICP),
+  Harold Abelson, Gerald Jay Sussman, Julie Sussman
